@@ -76,7 +76,7 @@ public class CalculateController {
 			double tipPersonFieldCalcul = calcul.calculTipPersonne(bill, tip, nbPeople);
 
 			
-			String history = date + " ; " + bill + " ; " + tip +  " ; " + nbPeople + "\n";
+			String history = date + " ; " + bill + " ; " + tip +  " ; " + nbPeople;
 			saveHistory(history, date, calcul);
 			
 			this.tipPersonField.setText(String.valueOf(tipPersonFieldCalcul));
@@ -104,7 +104,6 @@ public class CalculateController {
         File file = new File("src/history.txt");
         ArrayList<String> newHistoric = new ArrayList<>();
         boolean dateExists = false;
-        System.out.println("ekfjkefkjlefnjleznfl");
         if (file.exists()) {
             try (BufferedReader reader = new BufferedReader(new FileReader(file))) {
                 String line;
